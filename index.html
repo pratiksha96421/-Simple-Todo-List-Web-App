@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Simple Todo List</h1>
+
+    <!--input and buttons to add new todos-->
+    <div id="controls" style="display:flex; align-items:center; gap:8px;">
+        <input type="text" id="todo-input" placeholder="Enter a todo and press Add or Enter">
+        <button id="add-btn">ADD</button>
+        <button id="clear-all">Clear All</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div id="empty-state" aria-live="polite" style="display:none;">Your todo list is empty — add something fun!</div>
+
+    <div id="test-harness">
+        <strong>Test harness:</strong>
+        <button id="run-tests">Run quick tests</button>
+        <span id="test-result" aria-live="polite"></span>
+    </div>
+
+    <!-- snackbar for undo -->
+    <div id="snackbar" role="status" aria-live="polite">
+        <span id="snackbar-text">Item deleted</span>
+        <button id="snackbar-undo">Undo</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
